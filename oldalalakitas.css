@@ -3,7 +3,59 @@
 töréspont. 700 px-nél, a navigáció arcticle fölé kerüljön és az aside az article alá*/
 
 /*a menüpontok ne legyenek aláhúzva,
-ne legyen felsorolás, ha fölé viszem az egeret, akkor változzon a háttér színe*/
+ne legyen felsorolás, ha fölé viszem az egeret, akkor változzon a háttér színe
+*/
 /*Hozd létre azokat a html-eket, amiket a menüben leírtunk és készítsd el a mintának megfelelő táblázatot az article tagbe!
 új táblázatformázás cs kell bele,
 de ugyanez az oldalkialakitas.css*/
+* {
+    box-sizing: border-box;
+}
+a {
+    color: darkgray;
+    text-decoration: none;
+    padding: 2px 5px 2px 5px;
+}
+a:visited {
+    color: rgb(69, 69, 69);
+}
+a:hover {
+    color: lightblue;
+    background-color: rgb(74, 183, 220);
+}
+nav ul {
+    list-style-type: none;
+}
+
+header {
+    grid-area: h;
+}
+nav {
+    grid-area: n;
+}
+article {
+    grid-area: a;
+}
+aside {
+    grid-area: as;
+}
+footer {
+    grid-area: f;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-areas:"h h h "
+                        "n a as "
+                        "f f f ";
+}
+@media screen and (max-width:700px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:"h "
+                            "n "
+                            "a "
+                            "as"
+                            "f";
+    }
+}

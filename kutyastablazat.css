@@ -1,25 +1,20 @@
 table, td, th {
-    border: 1px solid gray;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
     border-collapse: collapse; /*cellák közti rések eltűntetése*/
 }
 table {
     width: 80%;
-    margin: auto;
-}
-table>thead>tr {
-    border: 3px solid navy;
+    text-align: center;
 }
 th {
-    background-color: #b3f0ff;
-    color: #005266;
-
+    background-color: white;
 }
 tr:nth-child(odd){
-    background-color: #66e0ff;
-    color: #ff0000;
-}
-.osszevont {
-    background-color: greenyellow;
+    background-color: lightgray;
+    color: black;
 }
 .responzivtablazat {
     width: 100%;
